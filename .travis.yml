@@ -14,7 +14,6 @@ before_install:
   - gcloud config set project multi-k8s-238320
   - gcloud config set compute/zone us-west1-a 
   - gcloud container clusters get-credentials multi-cluster
-  - echo  $DOCKER_USERNAME
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t ateivJ/react-test -f ./client/Dockerfile.dev ./client
 
